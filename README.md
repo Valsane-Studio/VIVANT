@@ -6,7 +6,7 @@ Une création Valsane Studio. Application web progressive (PWA) en français. Un
 
 - Design clair et minimaliste pour Valsane Studio : fond crème très pâle, cartes blanches, typographie sombre et séparateurs fins.
 - **100 découvertes**, avec une revue éditoriale pour réduire les sujets redondants : 11 fiches proches remplacées par des phénomènes distincts et documentés. Chaque fiche possède un texte court, un mécanisme scientifique, une source consultable, un approfondissement et un lexique.
-- **En savoir plus** : un paragraphe approfondi, écrit spécifiquement pour chaque fait, à dérouler si on le souhaite.
+- **En savoir plus** : un mini-article dépliable en plusieurs paragraphes, avec intertitres, mots scientifiques mis en gras, éclairage supplémentaire spécifique à chacun des 100 faits, notion clé et lien vers la source.
 - **Petit lexique** en bas de chaque fiche : plusieurs notions expliquées en français simple.
 - **Photographies supplémentaires** : la photo d'ouverture vient de la page encyclopédique de référence ; quand Wikimedia Commons renvoie des images répondant à la recherche du nom scientifique, une galerie de miniatures apparaît. Jusqu'à 5 photos pertinentes ; si la recherche ne trouve rien, la galerie n'invente pas de photo. On peut toucher une miniature et ouvrir la photo en grand. Un lien permet de consulter l'auteur et les conditions de licence de chaque cliché.
 - Favoris locaux, partage natif quand disponible, filtres animaux/plantes et tirage sans répétition par catégorie. Aucun compteur de progression du type « 28/100 » n'est affiché en haut des fiches.
@@ -37,3 +37,6 @@ Transférer le contenu de ce dossier à la racine d'un dépôt GitHub et activer
 - `sw.js` : version du cache PWA à incrémenter en cas de mise à jour
 
 Les organismes mentionnés sont documentés par des sources externes ; les institutions citées n'ont aucun partenariat avec l'application.
+## Fiches enrichies (octobre 2026)
+
+La section « En savoir plus » est organisée en trois parties pour favoriser une lecture par étapes. Les fichiers `reading_notes_a.js` et `reading_notes_b.js` apportent un complément éditorial spécifique à chaque découverte ; ils sont inclus dans le cache PWA pour la lecture hors ligne. Les mots-clés sont accentués visuellement par le rendu DOM, sans HTML injecté par les contenus.
