@@ -236,7 +236,7 @@
     const p=document.createElement('p');
     const unique=[...new Set(terms.filter(Boolean).map(s=>String(s).trim()).filter(s=>s.length>3))].sort((a,b)=>b.length-a.length).slice(0,18);
     if(!unique.length){p.textContent=content;parent.append(p);return;}
-    const escaped=unique.map(s=>s.replace(/[.*+?^$\{\}()|\[\]\\]/g,'\\  function addLexicon(f){'));
+    const escaped=unique.map(s=>s.replace(/[\[\]().*+?^$|{}\\]/g,'\\$&'));
     const pattern=new RegExp('('+escaped.join('|')+')','giu');
     let cursor=0, match, highlights=0;
     while((match=pattern.exec(content))!==null){
