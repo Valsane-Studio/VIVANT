@@ -57,10 +57,8 @@
     .deep summary{padding:20px 23px;font-size:14px;letter-spacing:.01em;line-height:1.45}
     .deep[open] summary{border-bottom:1px solid #e2eae0;background:#f3f8f2}
     .deepArticle{padding:27px 28px 26px;max-width:100%;background:#fff}
-    .deepArticleHead{padding-bottom:19px;border-bottom:1px solid #e7ede6}
-    .deepArticleKicker{color:#588568;font-weight:750;letter-spacing:.16em;font-size:10px}
-    .deepArticleLead{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,2.8vw,28px);line-height:1.22;letter-spacing:-.025em;color:#254232;margin-top:10px;max-width:620px}
-    .deepSection{margin-top:23px}
+    .deepSection{margin-top:22px}
+    .deepArticle>.deepSection:first-child{margin-top:0}
     .deepSection h3{font-size:12px;color:#3e7450;letter-spacing:.12em;text-transform:uppercase;line-height:1.45;margin:0 0 11px;font-weight:800}
     .deepArticle .deepSection p{padding:0;border:0;margin:0 0 13px;color:#46564a;font-size:clamp(14px,1.6vw,16px);line-height:1.84;max-width:69ch;overflow-wrap:break-word}
     .deepArticle .deepSection p:last-child{margin-bottom:0}
@@ -69,7 +67,7 @@
     .deepArticleNote{margin-top:28px;border:1px solid #dfe9de;border-radius:12px;background:#f3f7f0;padding:17px 19px;color:#4a5f4e;font-size:13px;line-height:1.6}
     .deepArticleNote>span{display:block;font-size:10px;letter-spacing:.14em;color:#53765d;font-weight:800;margin-bottom:5px}
     .deepArticleSource{display:inline-flex;margin-top:22px;font-size:12px;color:#426b4d;text-decoration:underline;text-decoration-color:#b2c9b5;text-underline-offset:4px}
-    @media(max-width:700px){.deep summary{padding:17px 17px;font-size:13px}.deepArticle{padding:23px 19px 24px}.deepSection{margin-top:21px}.deepArticle .deepSection p{font-size:14px;line-height:1.78}.deepArticleLead{font-size:23px}.deepArticleNote{padding:15px 16px}.deepFeature{padding-left:14px}}
+    @media(max-width:700px){.deep summary{padding:17px 17px;font-size:13px}.deepArticle{padding:23px 19px 24px}.deepSection{margin-top:21px}.deepArticle .deepSection p{font-size:14px;line-height:1.78}.deepArticleNote{padding:15px 16px}.deepFeature{padding-left:14px}}
 
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
@@ -251,7 +249,7 @@
   }
   function articleSection(parent,heading,paragraphs,terms,featured=false){
     const section=document.createElement('section');section.className=featured?'deepSection deepFeature':'deepSection';
-    const h=document.createElement('h3');h.textContent=heading;section.append(h);
+    if(heading){const h=document.createElement('h3');h.textContent=heading;section.append(h);}
     for(const paragraph of paragraphs){if(paragraph?.trim())richParagraph(section,paragraph.trim(),terms);}
     parent.append(section);
   }
@@ -265,12 +263,8 @@
     const first=sentences.slice(0,cut).join(' ');
     const second=sentences.slice(cut).join(' ');
     const concepts=[f.term,...(insight.lexicon||[]).map(x=>x[0]),f.organism,f.latin?.split(' ')[0]];
-    const head=document.createElement('div');head.className='deepArticleHead';
-    const kicker=document.createElement('div');kicker.className='deepArticleKicker';kicker.textContent='EXPLORER LA DÉCOUVERTE';
-    const lead=document.createElement('div');lead.className='deepArticleLead';lead.textContent='Pour comprendre ce qui se passe vraiment';
-    head.append(kicker,lead);node.append(head);
-    articleSection(node,'Dans le détail',[first],concepts);
-    if(second)articleSection(node,'Les détails qui comptent',[second],concepts);
+    articleSection(node,'',[first],concepts);
+    if(second)articleSection(node,'',[second],concepts);
     articleSection(node,'Un éclairage supplémentaire',[extra||f.detail],concepts,true);
     const note=document.createElement('div');note.className='deepArticleNote';
     const small=document.createElement('span');small.textContent='NOTION CLÉ';
