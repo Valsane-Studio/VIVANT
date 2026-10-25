@@ -5,9 +5,9 @@ Une création Valsane Studio. Application web progressive (PWA) en français. Un
 ## Version claire — nouveautés
 
 - Design clair et minimaliste pour Valsane Studio : fond crème très pâle, cartes blanches, typographie sombre et séparateurs fins.
-- 28 découvertes initiales (14 animaux et 14 plantes), avec texte court et mécanisme scientifique.
+- **100 découvertes** (28 fiches originales + 72 nouvelles), avec texte court, mécanisme scientifique et source consultable pour chacune. Les sources sont principalement des organismes de recherche, des musées d’histoire naturelle, des jardins botaniques et des publications académiques.
 - **En savoir plus** : un paragraphe approfondi, écrit spécifiquement pour chaque fait, à dérouler si on le souhaite.
-- **Petit lexique** en bas de chaque fiche : 4 à 5 notions expliquées en français simple.
+- **Petit lexique** en bas de chaque fiche : plusieurs notions expliquées en français simple.
 - **Photographies supplémentaires** : la photo d'ouverture vient de la page encyclopédique de référence ; quand Wikimedia Commons renvoie des images répondant à la recherche du nom scientifique, une galerie de miniatures apparaît. Jusqu'à 5 photos pertinentes ; si la recherche ne trouve rien, la galerie n'invente pas de photo. On peut toucher une miniature et ouvrir la photo en grand. Un lien permet de consulter l'auteur et les conditions de licence de chaque cliché.
 - Favoris locaux, partage natif quand disponible, filtres animaux/plantes et tirage sans répétition par catégorie.
 
