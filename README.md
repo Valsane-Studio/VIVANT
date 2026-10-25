@@ -1,10 +1,10 @@
 # VIVANT — Découvertes animales et végétales
 
-Application web progressive (PWA) en français. Une découverte scientifique visuelle par ouverture, sans compte, publicité ni base de données.
+Une création Valsane Studio. Application web progressive (PWA) en français. Une découverte scientifique visuelle par ouverture, sans compte, publicité ni base de données.
 
 ## Version claire — nouveautés
 
-- Design clair et minimaliste, inspiré de l'univers BOS Light : fond crème très pâle, cartes blanches, typographie sombre et séparateurs fins.
+- Design clair et minimaliste pour Valsane Studio : fond crème très pâle, cartes blanches, typographie sombre et séparateurs fins.
 - 28 découvertes initiales (14 animaux et 14 plantes), avec texte court et mécanisme scientifique.
 - **En savoir plus** : un paragraphe approfondi, écrit spécifiquement pour chaque fait, à dérouler si on le souhaite.
 - **Petit lexique** en bas de chaque fiche : 4 à 5 notions expliquées en français simple.
