@@ -40,3 +40,7 @@ Les organismes mentionnés sont documentés par des sources externes ; les insti
 ## Fiches enrichies (octobre 2026)
 
 La section « En savoir plus » est organisée en trois parties pour favoriser une lecture par étapes. Les fichiers `reading_notes_a.js` et `reading_notes_b.js` apportent un complément éditorial spécifique à chaque découverte ; ils sont inclus dans le cache PWA pour la lecture hors ligne. Les mots-clés sont accentués visuellement par le rendu DOM, sans HTML injecté par les contenus.
+
+## Relecture éditoriale française
+
+Les 100 fiches ont été relues dans leurs trois niveaux de texte (introduction, explication scientifique et approfondissements), ainsi que dans leurs éclairages complémentaires et leur lexique. Les formulations imprécises, les tournures trop abstraites et les anglicismes inutiles ont été harmonisés sans changer l'identité visuelle, le fonctionnement des favoris ni les références scientifiques. Le cache PWA a été actualisé pour diffuser les corrections aux installations existantes.
