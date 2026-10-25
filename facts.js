@@ -815,8 +815,8 @@ const FACTS = [
     "detail": "Des expériences ont confirmé une forme de stéréovision chez ces insectes, distincte de la vision humaine.",
     "term": "Stéréovision",
     "definition": "Perception de la profondeur par comparaison des deux images oculaires.",
-    "source": "Natural History Museum",
-    "url": "https://www.nhm.ac.uk/our-science/services/collections/entomology/small-orders.html",
+    "source": "Current Biology — étude de vision stéréoscopique",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29429616/",
     "id": "V63"
   },
   {
@@ -1218,8 +1218,8 @@ const FACTS = [
     "detail": "Le chemin de sortie impose le passage près des organes reproducteurs, favorisant le transport du pollen.",
     "term": "Pollinisation par piège",
     "definition": "Transfert de pollen obtenu grâce au trajet imposé à un pollinisateur.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/orchid-pollination-tricks",
+    "source": "Smithsonian Environmental Research Center — revue scientifique",
+    "url": "https://serc.si.edu/sites/default/files/orchid_pollination_biology.pdf",
     "id": "V94"
   },
   {
@@ -1239,13 +1239,13 @@ const FACTS = [
     "group": "plante",
     "organism": "Nénuphar pygmée du Rwanda",
     "latin": "Nymphaea thermarum",
-    "title": "Cette minuscule plante a disparu de la nature.",
-    "intro": "Le très petit nénuphar Nymphaea thermarum, connu d’une source chaude du Rwanda, a été déclaré éteint à l’état sauvage.",
-    "detail": "Sa conservation en culture illustre le rôle crucial des collections botaniques pour certaines espèces rares.",
-    "term": "Extinction à l’état sauvage",
-    "definition": "Situation d’une espèce ne survivant plus dans son milieu naturel, mais encore conservée ailleurs.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/new-giant-waterlily-victoria-boliviana-discovered-at-kew",
+    "title": "On la croyait disparue de la nature… jusqu’à sa redécouverte.",
+    "intro": "Ce nénuphar du Rwanda possède des feuilles parfois larges d’à peine un centimètre. Cru éteint à l’état sauvage pendant des années, il a été retrouvé dans une zone humide rwandaise en 2023.",
+    "detail": "Sa seule population connue auparavant avait disparu après la modification d’une source thermale. La multiplication en jardin botanique a permis de préserver l’espèce. Sa redécouverte dans la nature ne signifie pas qu’elle soit tirée d’affaire : elle reste gravement menacée.",
+    "term": "Conservation ex situ",
+    "definition": "Protection d’une espèce en dehors de son habitat naturel, par exemple dans un jardin botanique ou une banque de graines.",
+    "source": "Royal Botanic Gardens, Kew — fiche actualisée",
+    "url": "https://www.kew.org/plants/nymphaea-thermarum",
     "id": "V96"
   },
   {
