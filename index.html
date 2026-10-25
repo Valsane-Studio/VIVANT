@@ -52,6 +52,25 @@
     .photoModal{display:none;position:fixed;z-index:50;inset:0;padding:20px;align-items:center;justify-content:center;background:rgba(8,17,11,.92)}.photoModal.open{display:flex}.photoModalBody{max-width:min(94vw,1160px);width:100%;max-height:94svh;display:flex;flex-direction:column;gap:10px;align-items:center}.photoModal img{max-width:100%;max-height:75svh;object-fit:contain;border-radius:5px}.photoModalControl{display:flex;justify-content:center;align-items:center;gap:12px;color:#eef4ef;font-size:12px}.photoModalControl a{color:#e4efe5;text-decoration:underline;text-underline-offset:3px}.lightClose{position:fixed;right:20px;top:18px;background:#fff;color:#244630;border:0;border-radius:50%;width:44px;height:44px;font-size:29px;line-height:1}
     @media(max-width:700px){.shell{width:calc(100% - 28px);padding-top:20px}.top{margin-bottom:33px}.intro{display:block;margin-bottom:19px}.intro p{margin:8px 0 0;text-align:left;max-width:none}.brand{font-size:17px}.brand-sub{font-size:9px}.top-actions{gap:6px}.outline{min-height:39px;padding:0 10px;font-size:11px}.hero{aspect-ratio:4/3;min-height:235px}.heroOverlay{padding:13px}.speciesBadge .organism{font-size:19px}.speciesBadge .latin{font-size:12px}.galleryWrap{padding:12px 14px}.thumb{flex-basis:84px;height:62px}.cardMain{padding:22px 20px 7px}.title{font-size:clamp(31px,8.3vw,43px)}.fine{margin-top:22px;padding-top:20px}.fine p,.deep p{font-size:13px}.lexicon{grid-template-columns:1fr;row-gap:13px}.cardTail{padding:17px 20px}.bottom{gap:10px;align-items:flex-start;flex-direction:column}.hint{max-width:none;font-size:11px}.next{align-self:flex-end;gap:12px;padding:0 18px;min-height:50px;font-size:13px}.foot{margin-top:25px}}
     @media(max-width:425px){.top-actions .outline:first-child{min-width:39px;padding:0 8px}.top-actions .outline:first-child .hide-sm{display:none}.identity{gap:8px}.brand{font-size:16px;letter-spacing:.2em}.brand-sub{font-size:8px;letter-spacing:0}.title{font-size:32px}.heroEmoji{font-size:50px}.heroFallbackTitle{font-size:22px}.zoom{font-size:0;gap:0}.zoom:before{content:"↗";font-size:15px}}
+    /* Dossier de lecture : sections aérées, hiérarchie claire et mots clés mis en relief. */
+    .deep{margin-top:29px;border:1px solid #d9e4d9;border-radius:16px;background:#fafcf9;box-shadow:0 5px 20px rgba(44,74,51,.025)}
+    .deep summary{padding:20px 23px;font-size:14px;letter-spacing:.01em;line-height:1.45}
+    .deep[open] summary{border-bottom:1px solid #e2eae0;background:#f3f8f2}
+    .deepArticle{padding:27px 28px 26px;max-width:100%;background:#fff}
+    .deepArticleHead{padding-bottom:19px;border-bottom:1px solid #e7ede6}
+    .deepArticleKicker{color:#588568;font-weight:750;letter-spacing:.16em;font-size:10px}
+    .deepArticleLead{font-family:Georgia,'Times New Roman',serif;font-size:clamp(22px,2.8vw,28px);line-height:1.22;letter-spacing:-.025em;color:#254232;margin-top:10px;max-width:620px}
+    .deepSection{margin-top:23px}
+    .deepSection h3{font-size:12px;color:#3e7450;letter-spacing:.12em;text-transform:uppercase;line-height:1.45;margin:0 0 11px;font-weight:800}
+    .deepArticle .deepSection p{padding:0;border:0;margin:0 0 13px;color:#46564a;font-size:clamp(14px,1.6vw,16px);line-height:1.84;max-width:69ch;overflow-wrap:break-word}
+    .deepArticle .deepSection p:last-child{margin-bottom:0}
+    .deepArticle strong{font-weight:750;color:#233d2a}
+    .deepFeature{border-left:3px solid #92b69a;padding:1px 0 1px 18px;margin-top:28px}
+    .deepArticleNote{margin-top:28px;border:1px solid #dfe9de;border-radius:12px;background:#f3f7f0;padding:17px 19px;color:#4a5f4e;font-size:13px;line-height:1.6}
+    .deepArticleNote>span{display:block;font-size:10px;letter-spacing:.14em;color:#53765d;font-weight:800;margin-bottom:5px}
+    .deepArticleSource{display:inline-flex;margin-top:22px;font-size:12px;color:#426b4d;text-decoration:underline;text-decoration-color:#b2c9b5;text-underline-offset:4px}
+    @media(max-width:700px){.deep summary{padding:17px 17px;font-size:13px}.deepArticle{padding:23px 19px 24px}.deepSection{margin-top:21px}.deepArticle .deepSection p{font-size:14px;line-height:1.78}.deepArticleLead{font-size:23px}.deepArticleNote{padding:15px 16px}.deepFeature{padding-left:14px}}
+
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
 </head>
@@ -115,7 +134,7 @@
       </section>
       <details class="deep" id="deepPanel">
         <summary>En savoir plus sur cette découverte <span class="moreIcon" aria-hidden="true">+</span></summary>
-        <p id="deepText"></p>
+        <div class="deepArticle" id="deepArticle"></div>
       </details>
       <section class="glossary" aria-label="Explication des mots scientifiques">
         <div class="sectionLabel"><span class="lineMark"></span>PETIT LEXIQUE · MOTS À CONNAÎTRE</div>
@@ -152,6 +171,8 @@
 </div>
 <script src="./facts.js"></script>
 <script src="./insights.js"></script>
+<script src="./reading_notes_a.js"></script>
+<script src="./reading_notes_b.js"></script>
 <script>
 (()=>{'use strict';
   const $=id=>document.getElementById(id);
@@ -210,11 +231,61 @@
   function loadPhotos(f){const request=++photoRequest;gallery=[];photoIndex=0;$('galleryWrap').hidden=true;$('zoom').classList.remove('visible');setFallback(f,'Recherche de photographies de cette espèce…');$('heroWrap').classList.add('loading');
     fetchCover(f,request);fetchMorePhotos(f,request).finally(()=>{if(request===photoRequest&&!gallery.length)setFallback(f,'Aucune photographie accessible pour cette espèce en ce moment.')});
   }
+  // Les textes restent des nœuds DOM : les enrichissements ne peuvent pas injecter du HTML.
+  function richParagraph(parent,content,terms){
+    const p=document.createElement('p');
+    const unique=[...new Set(terms.filter(Boolean).map(s=>String(s).trim()).filter(s=>s.length>3))].sort((a,b)=>b.length-a.length).slice(0,18);
+    if(!unique.length){p.textContent=content;parent.append(p);return;}
+    const escaped=unique.map(s=>s.replace(/[.*+?^$\{\}()|\[\]\\]/g,'\\  function addLexicon(f){'));
+    const pattern=new RegExp('('+escaped.join('|')+')','giu');
+    let cursor=0, match, highlights=0;
+    while((match=pattern.exec(content))!==null){
+      if(match.index>cursor)p.append(document.createTextNode(content.slice(cursor,match.index)));
+      if(highlights<7){
+        const strong=document.createElement('strong');strong.textContent=match[0];p.append(strong);highlights++;
+      }else p.append(document.createTextNode(match[0]));
+      cursor=match.index+match[0].length;
+    }
+    if(cursor<content.length)p.append(document.createTextNode(content.slice(cursor)));
+    parent.append(p);
+  }
+  function articleSection(parent,heading,paragraphs,terms,featured=false){
+    const section=document.createElement('section');section.className=featured?'deepSection deepFeature':'deepSection';
+    const h=document.createElement('h3');h.textContent=heading;section.append(h);
+    for(const paragraph of paragraphs){if(paragraph?.trim())richParagraph(section,paragraph.trim(),terms);}
+    parent.append(section);
+  }
+  function renderDeepArticle(f){
+    const node=$('deepArticle');node.replaceChildren();
+    const insight=INSIGHTS[f.id]||{};
+    const extra=window.VIVANT_READING_NOTES?.[f.id]||'';
+    const body=(insight.deeper||f.detail||'').trim();
+    const sentences=body.match(/[^.!?]+(?:[.!?]+|$)/gu)?.map(s=>s.trim()).filter(Boolean)||[body];
+    const cut=Math.max(1,Math.ceil(sentences.length/2));
+    const first=sentences.slice(0,cut).join(' ');
+    const second=sentences.slice(cut).join(' ');
+    const concepts=[f.term,...(insight.lexicon||[]).map(x=>x[0]),f.organism,f.latin?.split(' ')[0]];
+    const head=document.createElement('div');head.className='deepArticleHead';
+    const kicker=document.createElement('div');kicker.className='deepArticleKicker';kicker.textContent='EXPLORER LA DÉCOUVERTE';
+    const lead=document.createElement('div');lead.className='deepArticleLead';lead.textContent='Pour comprendre ce qui se passe vraiment';
+    head.append(kicker,lead);node.append(head);
+    articleSection(node,'Dans le détail',[first],concepts);
+    if(second)articleSection(node,'Le mécanisme et ses limites',[second],concepts);
+    articleSection(node,'Un éclairage supplémentaire',[extra||f.detail],concepts,true);
+    const note=document.createElement('div');note.className='deepArticleNote';
+    const small=document.createElement('span');small.textContent='NOTION CLÉ';
+    const value=document.createElement('div');
+    const b=document.createElement('strong');b.textContent=f.term;
+    const desc=document.createElement('span');desc.textContent=' — '+f.definition;
+    value.append(b,desc);note.append(small,value);node.append(note);
+    const a=document.createElement('a');a.className='deepArticleSource';a.href=f.url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Consulter la référence scientifique ↗';
+    node.append(a);
+  }
   function addLexicon(f){const node=$('lexiconList');node.replaceChildren();const insight=INSIGHTS[f.id];const terms=[[f.term,f.definition],...(insight?.lexicon||[])];const done=new Set();for(const [term,definition] of terms){const key=term.toLocaleLowerCase('fr');if(done.has(key))continue;done.add(key);const item=document.createElement('div');item.className='lexEntry';const dt=document.createElement('dt');dt.textContent=term;const dd=document.createElement('dd');dd.textContent=definition;item.append(dt,dd);node.append(item)} }
   function draw(f){if(!f)return;current=f;$('factCard').dataset.group=f.group;
     $('label').textContent=f.group==='animal'?'DÉCOUVERTE · MONDE ANIMAL':'DÉCOUVERTE · MONDE VÉGÉTAL';
     $('organism').textContent=f.organism;$('latin').textContent=f.latin;$('title').textContent=f.title;$('introText').textContent=f.intro;$('detail').textContent=f.detail;
-    $('deepText').textContent=INSIGHTS[f.id]?.deeper||'';$('deepPanel').open=false;addLexicon(f);
+    $('deepPanel').open=false;renderDeepArticle(f);addLexicon(f);
     $('sourceName').textContent='Source scientifique · '+f.source;$('source').href=f.url;$('heroImage').alt='Photographie de '+f.organism;loadPhotos(f);
     if(!seen.includes(f.id)){seen.push(f.id);store.set('seen',seen)}updateCounters();window.scrollTo({top:0,behavior:'instant'});
   }
