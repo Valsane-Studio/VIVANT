@@ -92,7 +92,7 @@
       <div class="heroOverlay">
         <div class="heroTop">
           <div class="pill" id="label">DÉCOUVERTE · MONDE VIVANT</div>
-          <div class="heroRight"><button id="zoom" class="zoom" type="button" aria-label="Agrandir la photo">Agrandir ↗</button><div class="heroCount" id="number">01 / 28</div></div>
+          <div class="heroRight"><button id="zoom" class="zoom" type="button" aria-label="Agrandir la photo">Agrandir ↗</button><div class="heroCount" id="number">01 / 100</div></div>
         </div>
         <div class="speciesBadge">
           <div class="organism" id="organism">Le saviez-vous ?</div>
@@ -159,14 +159,15 @@
 
   const wikiPages={
     V01:'Wood_frog',V02:'Epaulette_shark',V03:'Star-nosed_mole',V04:'Vampire_squid',V05:'Common_octopus',V06:'Hummingbird',V07:'Bombardier_beetle',V08:'Parrotfish',V09:'Macropinna_microstoma',V10:'Mantis_shrimp',V11:'Scleractinia',V12:'Superb_lyrebird',V13:'Painted_turtle',V14:'Siphonophorae',
-    V15:'Welwitschia',V16:'Rafflesia_arnoldii',V17:'Common_fig',V18:'Cuscuta',V19:'Utricularia',V20:'Lithops',V21:'Ophrys_speculum',V22:'Orchidaceae',V23:'Dracula_(plant)',V24:'Rhizophora_mangle',V25:'Hydnora_africana',V26:'Venus_flytrap',V27:'Banksia',V28:'Drosera_pygmaea'
+    V15:'Welwitschia',V16:'Rafflesia_arnoldii',V17:'Common_fig',V18:'Cuscuta',V19:'Utricularia',V20:'Lithops',V21:'Ophrys_speculum',V22:'Orchidaceae',V23:'Dracula_(plant)',V24:'Rhizophora_mangle',V25:'Hydnora_africana',V26:'Venus_flytrap',V27:'Banksia',V28:'Drosera_pygmaea',
+    V29:"Turritopsis_dohrnii",V30:"Axolotl",V31:"Tardigrade",V32:"Pacific_hagfish",V33:"Bathochordaeus",V34:"Sea_cucumber",V35:"Pearlfish",V36:"Starfish",V37:"Ceratioidei",V38:"Cassiopea",V39:"Lions_mane_jellyfish",V40:"Arctic_tern",V41:"Greater_flamingo",V42:"Flamingo",V43:"Greater_short-horned_lizard",V44:"Narwhal",V45:"Narwhal",V46:"Common_bottlenose_dolphin",V47:"Bumblebee",V48:"Bumblebee",V49:"Photinus_carolinus",V50:"Photuris",V51:"Orchid_mantis",V52:"Phyllocrania_paradoxa",V53:"Tettigoniidae",V54:"Broadclub_cuttlefish",V55:"Hermit_crab",V56:"Striated_frogfish",V57:"Nudibranch",V58:"Decorator_crab",V59:"Papilio_dardanus",V60:"Bigfin_squid",V61:"Cranchiidae",V62:"Parrotfish",V63:"Mantis",V64:"Platypus",V65:"Stygiomedusa_gigantea",V66:"Strongylocentrotus_fragilis",V67:"Enypniastes_eximia",V68:"Mimic_octopus",V69:"Leafy_seadragon",V70:"Amorphophallus_titanum",V71:"Mimosa_pudica",V72:"Nepenthes_lowii",V73:"Nepenthes_hemsleyana",V74:"Cephalotus_follicularis",V75:"Darlingtonia_californica",V76:"Victoria_boliviana",V77:"Victoria_boliviana",V78:"Victoria_(plant)",V79:"Pando_(tree)",V80:"Pinus_longaeva",V81:"Arceuthobium_tsugense",V82:"Vanilla_planifolia",V83:"Salvia",V84:"Gunnera",V85:"Grevillea",V86:"Persoonia",V87:"Equisetum",V88:"Bellis_perennis",V89:"Yucca",V90:"Aristolochia",V91:"Angraecum_sesquipedale",V92:"Ophrys_apifera",V93:"Drakaea",V94:"Coryanthes",V95:"Psychotria_elata",V96:"Nymphaea_thermarum",V97:"Petunia_integrifolia",V98:"Strelitzia_reginae",V99:"Trifolium",V100:"Galega_officinalis"
   };
   const fallbackEmoji={animal:'🐾',plante:'🌿'};
   const imageCache=store.get('images',{});
   let filter='tous',current=null,deferredPrompt=null,toastTimeout;
   let saved=store.get('saved',[]),seen=store.get('seen',[]);if(!Array.isArray(saved))saved=[];if(!Array.isArray(seen))seen=[];
   const galleryCache=new Map();let gallery=[],photoIndex=0,photoRequest=0;
-  const commonsQuery={V06:'hummingbird',V07:'bombardier beetle',V08:'parrotfish',V11:'Scleractinia',V12:'Menura novaehollandiae',V13:'Chrysemys picta',V14:'Siphonophorae',V17:'Ficus carica',V18:'Cuscuta',V21:'Ophrys speculum',V22:'Orchidaceae',V23:'Dracula orchid',V27:'Banksia',V28:'Drosera pygmaea'};
+  const commonsQuery={V06:'hummingbird',V07:'bombardier beetle',V08:'parrotfish',V11:'Scleractinia',V12:'Menura novaehollandiae',V13:'Chrysemys picta',V14:'Siphonophorae',V17:'Ficus carica',V18:'Cuscuta',V21:'Ophrys speculum',V22:'Orchidaceae',V23:'Dracula orchid',V27:'Banksia',V28:'Drosera pygmaea',V37:"anglerfish ceratioidei",V38:"Cassiopea jellyfish",V42:"flamingo",V47:"Bombus bumblebee",V58:"decorator crab",V61:"Cranchiidae glass squid",V63:"Mantis",V70:"Amorphophallus titanum",V31:"Tardigrade",V34:"Sea cucumber",V35:"Pearlfish",V36:"Starfish",V53:"Tettigoniidae",V57:"Nudibranch",V62:"Parrotfish"};
 
   function shuffle(arr){let a=[...arr];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
   function safeText(html){if(!html)return '';return new DOMParser().parseFromString(html,'text/html').body.textContent?.trim().slice(0,105)||''}
