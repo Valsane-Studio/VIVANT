@@ -315,15 +315,15 @@ const FACTS = [
   {
     "id": "V25",
     "group": "plante",
-    "organism": "Hydnore africaine",
-    "latin": "Hydnora africana",
-    "title": "Cette plante vit sous terre et fleurit comme un piège.",
-    "intro": "Cette plante parasite, dépourvue de feuilles et de chlorophylle, reste enfouie presque entièrement. Sa fleur apparaît en surface après les pluies.",
-    "detail": "Son odeur de matière organique en décomposition attire des coléoptères qui transportent son pollen. Il s’agit d’une stratégie de pollinisation, et non d’une plante carnivore.",
-    "term": "Achlorophyllie",
-    "definition": "Absence de chlorophylle, empêchant la photosynthèse habituelle.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/plants/hydnora-africana"
+    "organism": "Cataire",
+    "latin": "Nepeta cataria",
+    "title": "Son odeur repousse les moustiques grâce à un récepteur sensoriel.",
+    "intro": "La cataire, célèbre pour l'effet qu'elle produit sur certains chats, libère aussi des molécules qui éloignent plusieurs insectes, dont des moustiques.",
+    "detail": "Une étude expérimentale a montré que la népétalactone active chez certains insectes un récepteur sensoriel nommé TRPA1. Quand ce récepteur ne fonctionne plus chez les moustiques testés, ils ne manifestent plus la même aversion pour la substance.",
+    "term": "Népétalactone",
+    "definition": "Molécule odorante présente dans la cataire, connue pour son action sur des animaux très différents.",
+    "source": "Current Biology, Melo et al. (2021)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33667373/"
   },
   {
     "id": "V26",
@@ -456,17 +456,17 @@ const FACTS = [
     "id": "V35"
   },
   {
+    "id": "V36",
     "group": "animal",
-    "organism": "Étoile de mer",
-    "latin": "Classe des Asteroidea",
-    "title": "Elle peut reconstruire les bras qu’elle a perdus.",
-    "intro": "Chez de nombreuses étoiles de mer, un bras sectionné repousse progressivement.",
-    "detail": "Autour de la blessure, des cellules changent d’état et participent à reconstruire les tissus. Chez certaines espèces, la fragmentation permet aussi la reproduction.",
-    "term": "Dédifférenciation",
-    "definition": "Retour d’une cellule spécialisée vers un état moins spécialisé.",
-    "source": "Smithsonian Ocean",
-    "url": "https://ocean.si.edu/ocean-life/invertebrates/sea-stars-urchins-and-relatives",
-    "id": "V36"
+    "organism": "Gerris, insecte patineur",
+    "latin": "Aquarius remigis",
+    "title": "Il marche sur l’eau grâce à une architecture invisible de ses pattes.",
+    "intro": "Cet insecte glisse sur les mares sans percer leur surface. Ses longues pattes portent des milliers de poils microscopiques qui repoussent l’eau.",
+    "detail": "Ces poils sont orientés et parcourus de fines rainures. Associés à la tension superficielle de l’eau, ils empêchent l'insecte de s'enfoncer et lui permettent de se déplacer en poussant sur la surface.",
+    "term": "Tension superficielle",
+    "definition": "Force liée à la cohésion des molécules d’un liquide à sa surface.",
+    "source": "Nature, Gao et Jiang (2004)",
+    "url": "https://www.nature.com/articles/432036a"
   },
   {
     "group": "animal",
@@ -573,17 +573,17 @@ const FACTS = [
     "id": "V44"
   },
   {
+    "id": "V45",
     "group": "animal",
-    "organism": "Défense sensorielle du narval",
-    "latin": "Monodon monoceros",
-    "title": "Cette dent géante peut percevoir l’eau autour d’elle.",
-    "intro": "Des recherches indiquent que la défense du narval possède une réelle fonction sensorielle.",
-    "detail": "Des canaux microscopiques relient la surface poreuse à des tissus innervés. Des expériences ont mesuré une réaction du rythme cardiaque à des changements de salinité.",
-    "term": "Salinité",
-    "definition": "Concentration de sels dissous dans l’eau.",
-    "source": "Smithsonian — étude anatomique",
-    "url": "https://repository.si.edu/items/1596e853-d3fb-47fb-ab14-1943b2308191",
-    "id": "V45"
+    "organism": "Requin du Groenland",
+    "latin": "Somniosus microcephalus",
+    "title": "Certains vivent plusieurs siècles.",
+    "intro": "Le requin du Groenland grandit si lentement qu’une étude estime l’âge d’un très grand individu à environ 392 ans, avec une importante marge d’incertitude.",
+    "detail": "Les chercheurs ont utilisé le carbone 14 contenu dans le noyau du cristallin des yeux de 28 femelles. Leurs résultats indiquent une longévité exceptionnelle, d’au moins 272 ans selon l'étude, sans permettre d’attribuer un âge exact à chaque requin.",
+    "term": "Datation au carbone 14",
+    "definition": "Méthode permettant d’estimer l’ancienneté d’une matière biologique à partir d’un isotope radioactif du carbone.",
+    "source": "Science, Nielsen et al. (2016)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27516602/"
   },
   {
     "group": "animal",
@@ -599,30 +599,30 @@ const FACTS = [
     "id": "V46"
   },
   {
+    "id": "V47",
     "group": "animal",
-    "organism": "Bourdon",
-    "latin": "Genre Bombus",
-    "title": "Ses poils détectent de faibles signaux électriques floraux.",
-    "intro": "Les bourdons perçoivent de petites différences de champ électrique autour des fleurs.",
-    "detail": "Des chercheurs ont montré que leurs minuscules poils se déplacent sous l’effet du champ et transmettent un signal nerveux.",
-    "term": "Électroréception",
-    "definition": "Détection de signaux électriques présents dans l’environnement.",
-    "source": "University of Bristol / PNAS",
-    "url": "https://www.bristol.ac.uk/news/2016/may/dancing-hairs-alert-bees.html",
-    "id": "V47"
+    "organism": "Bourdon terrestre",
+    "latin": "Bombus terrestris",
+    "title": "Des bourdons peuvent manipuler des balles sans récompense alimentaire.",
+    "intro": "Dans une expérience, des bourdons terrestres faisaient rouler de petites boules en bois alors qu’aucune nourriture ni entraînement ne les y incitait.",
+    "detail": "Les chercheurs ont constaté que ces manipulations répondaient à plusieurs critères comportementaux du jeu. Les bourdons plus jeunes faisaient notamment rouler davantage de balles que les individus âgés.",
+    "term": "Jeu comportemental",
+    "definition": "Activité répétée qui n’a pas de fonction utilitaire immédiate évidente et répond à des critères scientifiques précis.",
+    "source": "Animal Behaviour, Galpayage Dona et al. (2022)",
+    "url": "https://doi.org/10.1016/j.anbehav.2022.08.013"
   },
   {
+    "id": "V48",
     "group": "animal",
-    "organism": "Bourdons butineurs",
-    "latin": "Genre Bombus",
-    "title": "Ils peuvent remarquer un changement électrique invisible sur une fleur.",
-    "intro": "Dans une expérience, des bourdons ont évité des fleurs dont le champ électrique avait été modifié par des pulvérisations.",
-    "detail": "Une variation de champ peut modifier la façon dont l’insecte choisit où se poser, indépendamment de la couleur ou de l’odeur visibles.",
-    "term": "Signal floral électrique",
-    "definition": "Information électrique liée à une fleur et perçue par certains pollinisateurs.",
-    "source": "University of Bristol / PNAS Nexus",
-    "url": "https://www.bristol.ac.uk/news/2022/november/fertilisers-change-how-bumblebees-sense-flowers.html",
-    "id": "V48"
+    "organism": "Poisson-archer",
+    "latin": "Genre Toxotes",
+    "title": "Il abat des insectes avec un jet d’eau qu’il sait ajuster.",
+    "intro": "Le poisson-archer vise des insectes posés au-dessus de l’eau et les fait tomber en projetant un jet avec sa bouche.",
+    "detail": "Son tir est compliqué par la réfraction de la lumière à la surface. Des expériences ont montré que ces poissons peuvent adapter leur manière de tirer lorsqu’un courant d’air perturbe artificiellement leurs jets.",
+    "term": "Réfraction",
+    "definition": "Changement de direction de la lumière lorsqu’elle passe d’un milieu à un autre, par exemple de l’air à l’eau.",
+    "source": "Étude expérimentale sur le poisson-archer (2024)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11147504/"
   },
   {
     "group": "animal",
@@ -664,30 +664,30 @@ const FACTS = [
     "id": "V51"
   },
   {
+    "id": "V52",
     "group": "animal",
-    "organism": "Mante feuille morte",
-    "latin": "Phyllocrania paradoxa",
-    "title": "Même les nervures de sa « feuille » sont une illusion.",
-    "intro": "Le corps de cette mante africaine évoque une feuille sèche, avec des plis et reliefs trompeurs.",
-    "detail": "Des formes corporelles et des pigments créent l’impression de nervures et de déchirures. Cela facilite sa dissimulation.",
-    "term": "Mimèse",
-    "definition": "Ressemblance avec un élément non vivant du milieu, ici une feuille morte.",
-    "source": "Natural History Museum",
-    "url": "https://www.nhm.ac.uk/discover/can-you-spot-hidden-animals-cunning-camouflage.html",
-    "id": "V52"
+    "organism": "Scarabée bousier nocturne",
+    "latin": "Scarabaeus satyrus",
+    "title": "Il peut s’orienter grâce à la Voie lactée.",
+    "intro": "Pour rouler sa boule de fumier en ligne droite, ce bousier africain peut utiliser la bande lumineuse de notre galaxie les nuits sans Lune.",
+    "detail": "Dans un planétarium, des bousiers conservaient une direction cohérente lorsque seule la Voie lactée était visible. Dans l’obscurité, leur orientation devenait beaucoup moins fiable.",
+    "term": "Orientation céleste",
+    "definition": "Utilisation des caractéristiques du ciel pour conserver une direction de déplacement.",
+    "source": "Current Biology, Dacke et al. (2013)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/23352694/"
   },
   {
+    "id": "V53",
     "group": "animal",
-    "organism": "Sauterelle-feuille",
-    "latin": "Famille des Tettigoniidae",
-    "title": "Elle imite jusqu’aux dégâts d’une feuille mangée.",
-    "intro": "Certaines sauterelles des régions tropicales ressemblent à des feuilles trouées, tachées ou partiellement dévorées.",
-    "detail": "Les nervures et faux dommages participent à un camouflage qui réduit les risques de repérage.",
-    "term": "Homochromie",
-    "definition": "Ressemblance de couleur avec le milieu environnant.",
-    "source": "Natural History Museum",
-    "url": "https://www.nhm.ac.uk/discover/can-you-spot-hidden-animals-cunning-camouflage.html",
-    "id": "V53"
+    "organism": "Papillon aux ailes de verre",
+    "latin": "Greta oto",
+    "title": "Ses ailes transparentes possèdent un traitement antireflet naturel.",
+    "intro": "Chez ce papillon, certaines zones des ailes laissent passer la lumière au lieu de diffuser de fortes couleurs : les structures de surface réduisent aussi les reflets.",
+    "detail": "Des analyses microscopiques ont révélé des piliers nanométriques de tailles irrégulières qui diminuent la réflexion lumineuse. La transparence résulte également d’une modification de la forme et de la densité des écailles.",
+    "term": "Nanostructure antireflet",
+    "definition": "Relief de très petite taille qui limite la part de lumière renvoyée par une surface.",
+    "source": "Nature Communications (2015) et Journal of Experimental Biology (2021)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8340268/"
   },
   {
     "group": "animal",
@@ -989,17 +989,17 @@ const FACTS = [
     "id": "V76"
   },
   {
+    "id": "V77",
     "group": "plante",
-    "organism": "Fleur du nénuphar géant",
-    "latin": "Victoria boliviana",
-    "title": "Sa fleur passe du blanc au rose en deux nuits.",
-    "intro": "Chaque fleur du nénuphar géant bolivien s’ouvre une première nuit blanche, puis une seconde nuit plus rosée.",
-    "detail": "Cette succession accompagne ses phases reproductrices et ses relations avec les coléoptères pollinisateurs.",
-    "term": "Protogynie",
-    "definition": "Maturation de la fonction femelle avant la fonction mâle d’une fleur.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/new-giant-waterlily-victoria-boliviana-discovered-at-kew",
-    "id": "V77"
+    "organism": "Fougère flottante Salvinia",
+    "latin": "Salvinia molesta",
+    "title": "Ses feuilles conservent une couche d’air même sous l’eau.",
+    "intro": "Les feuilles de cette fougère flottante peuvent retenir de l’air lorsqu’elles sont immergées, grâce à d’étonnants poils microscopiques en forme de fouet.",
+    "detail": "Le corps des poils est fortement hydrofuge, mais leurs extrémités accrochent localement l’eau. La couche d’air emprisonnée contribue fortement à sa propre stabilité, comme un petit ressort pneumatique.",
+    "term": "Effet Salvinia",
+    "definition": "Capacité d’une surface végétale à maintenir une couche d’air sous l’eau grâce à sa microstructure.",
+    "source": "Small, Gandyra et al. (2020)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32996250/"
   },
   {
     "group": "plante",
@@ -1106,17 +1106,17 @@ const FACTS = [
     "id": "V85"
   },
   {
+    "id": "V86",
     "group": "plante",
-    "organism": "Persoonia",
-    "latin": "Genre Persoonia",
-    "title": "Une écorce épaisse peut protéger ses bourgeons du feu.",
-    "intro": "Certaines plantes australiennes du genre Persoonia portent des bourgeons protégés sous une écorce résistante.",
-    "detail": "Après un incendie, ces bourgeons survivants peuvent redonner des branches.",
-    "term": "Bourgeon épicormique",
-    "definition": "Bourgeon situé sous ou dans l’écorce, capable de produire une nouvelle pousse.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/how-plants-have-adapted",
-    "id": "V86"
+    "organism": "Acacia à fourmis",
+    "latin": "Vachellia drepanolobium",
+    "title": "Il héberge des fourmis qui peuvent décourager les grands herbivores.",
+    "intro": "Cet acacia africain abrite des colonies de fourmis dans certaines épines gonflées. Les insectes attaquent les animaux qui tentent de brouter l’arbre.",
+    "detail": "Des expériences avec des chèvres ont montré que la combinaison des épines et des fourmis limite fortement l’alimentation sur les arbres occupés. Les insectes renforcent donc la défense physique de la plante.",
+    "term": "Myrmécophytisme",
+    "definition": "Association durable dans laquelle une plante héberge des fourmis et peut en tirer une protection.",
+    "source": "Oecologia, Stapley (1998)",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28308433/"
   },
   {
     "group": "plante",
@@ -1184,17 +1184,17 @@ const FACTS = [
     "id": "V91"
   },
   {
+    "id": "V92",
     "group": "plante",
-    "organism": "Ophrys abeille",
-    "latin": "Ophrys apifera",
-    "title": "Elle imite une abeille, mais peut aussi se féconder seule.",
-    "intro": "Cette orchidée possède une fleur dont le grand labelle ressemble à un insecte femelle.",
-    "detail": "Dans certaines régions elle trompe des pollinisateurs ; au Royaume-Uni, l’autopollinisation lui permet généralement de se reproduire sans eux.",
-    "term": "Autopollinisation",
-    "definition": "Transfert du pollen vers les organes femelles de la même fleur ou du même individu.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/orchid-pollination-tricks",
-    "id": "V92"
+    "organism": "Bambous à floraison collective",
+    "latin": "Diverses espèces de Bambusoideae",
+    "title": "Certaines forêts de bambous fleurissent ensemble après des décennies.",
+    "intro": "Chez certaines espèces, des bambous très éloignés peuvent fleurir au cours d'une même période, parfois après plusieurs dizaines d'années sans produire de fleurs.",
+    "detail": "Ces floraisons massives produisent des graines, puis beaucoup de tiges meurent. La durée du cycle dépend fortement de l’espèce, et toutes les espèces de bambous ne se comportent pas ainsi.",
+    "term": "Floraison grégaire",
+    "definition": "Floraison synchronisée de nombreux individus d’une espèce sur une zone étendue.",
+    "source": "Ecological Monographs, Zheng et al. (2024)",
+    "url": "https://esajournals.onlinelibrary.wiley.com/doi/full/10.1002/ecm.1621"
   },
   {
     "group": "plante",
@@ -1275,17 +1275,17 @@ const FACTS = [
     "id": "V98"
   },
   {
+    "id": "V99",
     "group": "plante",
-    "organism": "Trèfle",
-    "latin": "Genre Trifolium",
-    "title": "Ses racines abritent des bactéries qui nourrissent aussi le sol.",
-    "intro": "Comme beaucoup de légumineuses, le trèfle peut vivre avec des bactéries logées dans des nodules de ses racines.",
-    "detail": "Les bactéries transforment l’azote de l’air en composés utilisables par la plante ; elles bénéficient de sucres issus de la photosynthèse.",
-    "term": "Nodosité racinaire",
-    "definition": "Petit organe de racine abritant des bactéries symbiotiques.",
-    "source": "Royal Botanic Gardens, Kew",
-    "url": "https://www.kew.org/read-and-watch/how-plants-have-adapted",
-    "id": "V99"
+    "organism": "Tabouret calaminaire",
+    "latin": "Noccaea caerulescens",
+    "title": "Cette petite plante peut concentrer des métaux dans ses feuilles.",
+    "intro": "Le tabouret calaminaire pousse dans certains sols riches en métaux et peut stocker dans ses tissus des quantités étonnantes de zinc ou de cadmium.",
+    "detail": "Cette aptitude, appelée hyperaccumulation, dépend des populations et des conditions. Elle intéresse les chercheurs qui étudient les plantes capables de supporter ou d’extraire certains contaminants du sol.",
+    "term": "Hyperaccumulation",
+    "definition": "Capacité de certaines plantes à concentrer dans leurs parties aériennes des métaux à des niveaux exceptionnellement élevés.",
+    "source": "Recherche sur Noccaea caerulescens (2014)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4064536/"
   },
   {
     "group": "plante",
